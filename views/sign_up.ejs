@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('./partials/header.ejs') %>
+        <link rel="stylesheet" href="/signup/signup.css">
+    </head>
+<body>
+   <div class="signupContainer">
+    <div class="top">
+        <div class="left">
+            <img src="/commonImages/Green Plant and Agriculture Logo.png" alt="">
+        </div>
+        <%-include('./partials/tabs.ejs') %>
+    </div>
+    <div class="body">
+        <div class="body-top">
+            <img src="/signup/signup_Images/nursery.jpg" alt="">
+            <div class="welcome_message">
+                <h1>SIGN UP</h1>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="content">
+                <%if(successMessage.length>0){ %>
+                    <div class="alert alert-success">
+                        <%=successMessage %>
+                    </div>
+                <% } %>
+                <%if(errorMessage.length>0){ %>
+                    <div class="alert alert-danger">
+                        <%=errorMessage %>
+                    </div>
+                <% } %>
+                <form action="/signup" method="post">
+                    <label for="username">USERNAME</label><br>
+                    <input type="text" id="username" name="username"><br>
+
+                    <label for="phoneNumber">PHONE NUMBER</label><br>
+                    <input type="text" id="phoneNumber" name="phoneNumber"><br>
+
+                    <label for="email">EMAIL ADDRESS</label><br>
+                    <input type="address" id="email" name="email"><br>
+
+                    <label for="password">PASSWORD</label><br>
+                    <input type="password" id="password" name="password"><br>
+                    <span class="eye-icon" id="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+
+                    <div class="button">
+                        <button>REGISTER</button>
+                    </div>
+                    <p>Already have an account? <a href="/login">log in</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+   </div>
+   <script src="/commonJavascript.js"></script>
+   <script src="/signup/signupJavascript.js"></script>
+</body>
+</html>
