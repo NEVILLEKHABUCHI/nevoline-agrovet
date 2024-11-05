@@ -9,15 +9,14 @@ exports.getSignup=(req,res)=>{
      if(!username||!phoneNumber||!email||!password || phoneNumber.length!=10){
         // Send error message
         req.flash('error','Fill in all the fields');
-        res.redirect('/signup');
-        return;
+        return res.status(400).redirect('/signup');
     }
 
     const query1 = `SELECT * FROM USERS WHERE PHONE_NUMBER = ? `;
     const query2 = `INSERT INTO USERS (USERNAME,PHONE_NUMBER,EMAIL_ADDRESS,PASSWORD) VALUES(?,?,?,?)`;
 
     // Checking whether the user already exists
-    db.query(query1,[phoneNumber],(err,results)=>{
+    db.query(query1,[phoneNumber],async(err,results)=>{
         if(err){
             console.log('Database error')
             req.flash('error','An error occurred while registering!');

@@ -11,6 +11,7 @@ const aboutRoutes = require('./routes/aboutRoutes');
 const servicesRoutes = require('./routes/servicesRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const signupRoutes = require('./routes/signupRoutes');
+const loginRoutes = require('./routes/loginRoutes');
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
@@ -48,6 +49,7 @@ app.use(aboutRoutes);
 app.use(servicesRoutes);
 app.use(productsRoutes);
 app.use('/',signupRoutes);
+app.use('/',loginRoutes);
 
 
 // Start the server

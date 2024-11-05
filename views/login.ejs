@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('./partials/header.ejs') %>
+        <link rel="stylesheet" href="/login/login.css">
+    </head>
+<body>
+    <div class="loginContainer">
+        <div class="top">
+            <div class="left">
+                <img src="/commonImages/Green Plant and Agriculture Logo.png" alt="">
+            </div>
+            <%-include('./partials/tabs.ejs') %>
+        </div>
+        <div class="body">
+            <div class="body-top">
+                <img src="/login/login_Images/cows.jpg" alt="">
+                <div class="welcome_message">
+                    <h1>LOG IN</h1>
+                </div>
+            </div>
+            <div class="body-content">
+                <div class="content">
+                    <%if(successMessage.length>0){ %>
+                        <div class="alert alert-success">
+                            <%=successMessage %>
+                        </div>
+                    <% } %>
+                    <%if(errorMessage.length>0){ %>
+                        <div class="alert alert-danger">
+                            <%=errorMessage %>
+                        </div>
+                    <% } %>
+                    <form action="/login" method="post">
+                        <label for="username">USERNAME</label><br>
+                        <input type="text" id="username" name="username"><br>
+    
+                        <label for="password">PASSWORD</label><br>
+                        <input type="password" id="password" name="password"><br>
+                        <span class="eye-icon" id="togglePassword">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
+    
+                        <div class="button">
+                            <button>LOG IN</button>
+                        </div>
+                        <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+       </div>
+       <script src="/commonJavascript.js"></script>
+       <script src="/login/loginJavascript.js"></script>
+</body>
+</html>
