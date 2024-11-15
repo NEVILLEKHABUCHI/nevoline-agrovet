@@ -1,0 +1,424 @@
+.adminFeedsContainer{
+    width: 99vw;
+    height: 99vh;
+}
+.adminFeedsContainer .top{
+    width: inherit;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+.adminFeedsContainer .top a {
+    color: black;
+    border: 1px solid #B2BEB5;
+    padding: 2px;
+}
+.adminFeedsContainer .top .left{
+    width: 18vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.adminFeedsContainer .top .left img{
+    width: 18vw;
+    height: 18vh;
+    object-fit: cover;
+}
+.adminFeedsContainer .top .right-1{
+    width: 50vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adminFeedsContainer .top .right-1 a {
+    font-weight: bold;
+}
+.adminFeedsContainer .top .right-2{
+    display: none;
+}
+.adminFeedsContainer .body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: inherit;
+    height: 79vh;
+}
+.adminFeedsContainer .body .body-top {
+    width: 99vw;
+    height: 50vh;  
+    background-image: url('/commonImages/Hare.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adminFeedsContainer .body .body-top .welcome_message{
+    height: max-content;
+    background-color: rgb(255, 255, 255,70%);
+    padding: 3px;
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.adminFeedsContainer .body .body-top .adminFeeds-message .alert {
+    display: flex;
+    justify-content: center;
+    animation: fadeOut 10s forwards;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-top .adminFeeds-message .alert-success{
+    color: #1F75FE;
+}
+.adminFeedsContainer .body .body-top .adminFeeds-message .alert-danger{
+    color: red;
+}
+.adminFeedsContainer .body .body-content .body-contentTop{
+    width: inherit;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-content .body-contentTop div{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+}
+.adminFeedsContainer .body .body-content .body-contentTop div button{
+    border: none;
+    background-color: white;
+}
+.adminFeedsContainer .body .body-content .body-contentTop div h3 {
+    color: #228B22;
+    border: 1px solid #228B22;
+}
+.adminFeedsContainer .body .body-content .body-contentTop form input{
+    width: 30vw;
+    height: 5vh;
+    border: 1.5px solid #228B22;
+    border-radius: 5px;
+}
+.adminFeedsContainer .body .body-content .body-contentTop form button{
+    padding: 0.5vw;
+    border: none;
+    border-radius: 2px;
+    background-color: #228B22;
+    color: white;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed {
+    width: 50vw;
+    height: max-content;
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    background-color: rgb(0, 0, 0,85%);
+    display: none;
+    /* text-align: start; */
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed #close{
+    background-color: rgb(0, 0, 0,85%);
+    color: white;
+    font-size: 1.5rem;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div {
+    width: inherit;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vh;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form {
+    width: 35vw;
+    padding: 1vw;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255,70%);
+    box-shadow: 5px 5px 15px black;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form  label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form  input {
+    width: 30vw;
+    height: 5vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px black;
+    border: none;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form .button button {
+    background-color: #03C03C;
+    color: white;
+    padding: 0.5vw;
+    border-radius: 5px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-content .body-contentBody{
+    padding-top: 1vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-bottom: 4vh;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table{
+    border-collapse: collapse;
+    width: 80vw;
+    border: 1px solid #228B22;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table th,td{
+   border: 1px solid #228B22;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr th:first-of-type{
+    width: 15vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2){
+    width: 30vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3){
+    width: 10vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4){
+    width: 10vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5){
+    width: 15vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td{
+    text-align: center;
+    padding: 0.5vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td img {
+    width: 12vw;
+    height: 12vh;
+    object-fit: cover;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0.2vw;
+    border: none;
+    color: white;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td button:first-of-type{
+    background-color: #228B22;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td button:nth-of-type(2){
+    background-color: red;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail {
+    width: 50vw;
+    height: max-content;
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    background-color: rgb(0, 0, 0,85%);
+    display: none;
+    text-align: start;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail #close{
+    background-color: rgb(0, 0, 0,85%);
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail p button{
+    font-size: 1.5rem;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vh;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form {
+    padding: 1vw;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255,70%);
+    box-shadow: 5px 5px 15px black;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form  label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form  input {
+    width: 30vw;
+    height: 5vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px black;
+    border: none;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form .button button {
+    background-color: #03C03C;
+    color: white;
+    padding: 0.5vw;
+    border-radius: 5px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width: 900px){
+    .adminFeedsContainer .top {
+        width: inherit;
+        height: 10vh;
+    }
+    .adminFeedsContainer .top .left{
+        width: 30vw;
+        height: inherit;
+    }
+    .adminFeedsContainer .top .left img{
+        width: 30vw;
+        height: 10vh;
+        object-fit: cover;
+    }
+    .adminFeedsContainer .top .right-1{
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between;s */
+        position: absolute;
+        top: 10vh;
+        left: 0vw;
+        right: 0vw;
+        background-color: rgb(255, 255, 255,70%);
+        transition: top 0.5s ease; /* Smooth transition */
+        display: none;
+    }
+    .adminFeedsContainer .top .right-2{
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+    .adminFeedsContainer .top .right-2 button{
+        font-size: 2rem;
+        border: none;
+        background-color: white;
+        color: black;
+    }
+    .adminFeedsContainer .top .right-2 button:nth-of-type(2){
+        display: none;
+    }
+    .adminFeedsContainer .body {
+        height: 89vh;
+    }
+    .adminFeedsContainer .body .body-top {
+        width: 99vw;
+        height: 50vh;
+    }
+    .adminFeedsContainer .body .body-top div{
+        width: 55vw;
+        padding: 3px;
+        text-align: center;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop{
+        margin-top: 2vh;
+        width: inherit;
+        height: 7vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop div{
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop form input{
+        width: 70vw;
+        height: 3vh;
+        border: 1.5px solid #228B22;
+        border-radius: 5px;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop form button{
+        padding: 0.5vw;
+        border: none;
+        border-radius: 2px;
+        background-color: #228B22;
+        color: white;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody{
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5vh;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table{
+        border-collapse: collapse;
+        width: 200vw;
+        border: 1px solid #228B22;
+        table-layout: fixed;
+        margin-left: 106vw;
+        margin-right: 2vw;
+        margin-bottom: 5vh;
+    }
+    th,td{
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 1px solid #228B22;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:first-of-type{
+        width: 35vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2){
+        width: 75vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3){
+        width: 30vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4){
+        width: 30vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5){
+        width: 30vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr td img {
+        width: 30vw;
+        height: 15vh;
+        object-fit: cover;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table .productDetail {
+        width: 90vw;
+        height: max-content;
+        position: absolute;
+        top: 25vh;
+        left: 4vw;
+        
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form  input {
+        width: 70vw;
+        height: 4vh;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop .addFeed {
+        width: 90vw;
+        height: max-content;
+        position: absolute;
+        top: 25vh;
+        left: 4vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop .addFeed div form {
+        width: 80vw;
+     
+    }
+  
+    .adminFeedsContainer .body .body-content .body-contentTop .addFeed div form  input {
+        width: 70vw;
+        height: 4vh;
+    }
+
+}

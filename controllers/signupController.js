@@ -9,7 +9,7 @@ exports.getSignup=(req,res)=>{
      if(!username||!phoneNumber||!email||!password || phoneNumber.length!=10){
         // Send error message
         req.flash('error','Fill in all the fields');
-        return res.status(400).redirect('/signup');
+        return res.status(400).redirect('/auth/signup');
     }
 
     const query1 = `SELECT * FROM USERS WHERE PHONE_NUMBER = ? `;
@@ -20,12 +20,12 @@ exports.getSignup=(req,res)=>{
         if(err){
             console.log('Database error')
             req.flash('error','An error occurred while registering!');
-            return res.status(500).redirect('/signup');
+            return res.status(500).redirect('/auth/signup');
         }
         if(results.length > 0){
             console.log('User already exists!');
             req.flash('error','User already exists,log in');
-            return res.status(400).redirect('/signup');
+            return res.status(400).redirect('/auth/signup');
         }
 
         // Hashing the password
@@ -33,17 +33,17 @@ exports.getSignup=(req,res)=>{
             if(err){
                 console.log('Password hashing failed');
                 req.flash('error','Kindly try again!');
-                return res.status(500).redirect('/signup');
+                return res.status(500).redirect('/auth/signup');
             }
             // Insert user into the database
             db.query(query2, [username, phoneNumber, email, hashedPassword], (err, results) => {
                 if(err) {
                     console.log('Error inserting user details to the database');
                     req.flash('error','Error registering user');
-                    return res.status(500).redirect('/signup')
+                    return res.status(500).redirect('/auth/signup')
                 }
                 req.flash('success','User registered successfully')
-                res.status(201).redirect('/signup');
+                res.status(201).redirect('/auth/signup');
             })
         })
     })

@@ -11,14 +11,14 @@ exports.getLogin=(req,res) => {
     if(!username || !password){
         // Send an error message
         req.flash('error',"Kindly fill in all the details");
-        return res.status(400).redirect('/login');
+        return res.status(400).redirect('/auth/login');
     }
     const query = `SELECT * FROM USERS WHERE USERNAME = ?`;
     db.query(query,[username], async(error, results) => {
         if(error){
             console.error('Cannot fetch details from the database!', error);
             req.flash('error','Internal server error!, Kindly try again.');
-            return res.status(500).redirect('/login');
+            return res.status(500).redirect('/auth/login');
         }
         if(results.length > 0){
             const user = results[0];
@@ -26,19 +26,22 @@ exports.getLogin=(req,res) => {
             // Compare the provided password with the hashed password in the database
             const match = await bcrypt.compare(password, user.PASSWORD);
             if(match){
+                // Adding sessions
+                req.session.user = {username: user.USERNAME};
                 // Check if the user is an admin
                 if(user.USERNAME === ADMIN_USERNAME){
-                    return res.status(200).send('You have successfully logged in as an admin');
+                    return res.status(200).redirect('/admin/Dashboard');
                 }else {
                     return res.status(200).send('You have successfully logged in as a common user');
                 }
             }else{
-                // Incorrect password
-                return res.status(401).send('Invalid email or password');
+                req.flash('error', 'Invalid username or password');
+                return res.status(401).redirect('/auth/login');
             }
         }else{
             // User not found
-            res.status(404).send('User not found');
+            req.flash('error', 'Invalid username or password');
+            res.status(404).redirect('/auth/login');;
         }
     })
     
