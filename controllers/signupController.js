@@ -43,7 +43,7 @@ exports.getSignup=(req,res)=>{
                     return res.status(500).redirect('/auth/signup')
                 }
                 req.flash('success','User registered successfully')
-                res.status(201).redirect('/auth/signup');
+                res.status(201).redirect('/auth/login');
             })
         })
     })

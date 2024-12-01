@@ -32,11 +32,10 @@
                         <h3>HISTORY</h3>
                     </div>
                     <form action="" method="">
-                        <input type="text" name="query" placeholder="Search for products">
-                        <button type="submit">Search</button>
+                        <input id="searchInput" type="text" name="query" placeholder="Search for products">
                     </form>
                     <div class="addFeed">
-                        <p><button id="close"><i class="fa-solid fa-x"></i></button></p>
+                        <p><button id="close" onclick="closeAddFeed()"><i class="fa-solid fa-x"></i></button></p>
                         <div>
                             <form action="/admin/addFeed" method="POST" enctype="multipart/form-data">
                                 <label for="image">FEED IMAGE</label><br>
