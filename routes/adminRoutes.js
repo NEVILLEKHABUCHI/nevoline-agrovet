@@ -13,5 +13,7 @@ router.get('/Dashboard', isAuthenticated, adminDashboardController.getAdminDashb
 // adminFeeds routes
 router.get('/Feeds', isAuthenticated, adminFeedsController.getAdminFeeds);
 router.post('/addFeed', isAuthenticated, upload.single('productImage'), adminFeedsController.addFeed);
+router.post('/feed/:id/edit', isAuthenticated, upload.single('productImage'), adminFeedsController.editFeed);
+router.get('/feed/:id/delete', isAuthenticated, upload.single('productImage'), adminFeedsController.deleteFeed);
 
 module.exports = router;

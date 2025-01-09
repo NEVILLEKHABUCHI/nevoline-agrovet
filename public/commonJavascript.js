@@ -19,3 +19,14 @@ function closeRight1(){
     closeTab.style.display="none";
     welcome_message.style.display="block";
 }
+
+// Function for showing a product's details and editing it
+function showDetails(productId){
+    let detailDiv = document.getElementById('detail-' +productId);
+
+    if(detailDiv.style.display === 'none' || detailDiv.style.display === ''){
+        detailDiv.style.display = 'block';
+    }else {
+        detailDiv.style.display = 'none';
+    }
+}

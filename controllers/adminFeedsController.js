@@ -42,3 +42,42 @@ exports.addFeed = async(req, res) => {
         res.redirect('/admin/Feeds');
     }
 }
+
+// Edit a feed product
+exports.editFeed = async(req, res) => {
+
+    const {productName, productPrice, productQuantity, productCategory} = req.body;
+    const updateData = {productName, productPrice, productQuantity, productCategory};
+
+    if(req.file){
+        updateData.productImage = req.file.buffer.toString('base64');
+    }
+    
+
+    try {
+        await Product.findByIdAndUpdate(req.params.id, updateData);
+
+        // Send success message
+        req.flash('success', 'Product updated successfully');
+        res.redirect('/admin/Feeds');
+    }catch(error){
+        // Send error message
+        req.flash('error', 'Failed to update the product');
+        res.redirect('/admin/Feeds');
+    }
+}
+
+// Delete feed product
+exports.deleteFeed = async(req, res) => {
+    try {
+        await Product.findByIdAndDelete(req.params.id);
+
+        // Send success message
+        req.flash('success', 'Product deleted Successfully');
+        res.redirect('/admin/Feeds');
+    }catch(error){
+        // Send error message
+        req.flash('error', 'Failed to update the product');
+        res.redirect('/admin/Feeds');
+    }
+}
