@@ -81,7 +81,7 @@
 .adminContainer .body .body-content .content .content-body img{
     width: inherit;
     height: 60vh;
-    object-fit: fill;
+    object-fit: cover;
 }
 .adminContainer .body .body-content .content .content-body div{
     width: inherit;
@@ -170,5 +170,10 @@
         height: max-content;
         border-radius: 10px;
         box-shadow: 5px 5px 15px black;
+    }
+    .adminContainer .body .body-content .content .content-body img{
+        width: inherit;
+        height: 40vh;
+        object-fit: cover;
     }
 }
