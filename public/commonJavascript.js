@@ -20,7 +20,25 @@ function closeRight1(){
     welcome_message.style.display="block";
 }
 
-// Function for showing a product's details and editing it
+// Functions for showing the form for adding a new item on the admin pages
+function showAddProduct(){
+    let addfeedDiv = document.querySelector('.addFeed');
+
+    if(addfeedDiv.style.display === 'none' || addfeedDiv.style.display === ''){
+        addfeedDiv.style.display = 'block';
+    }else {
+        addfeedDiv.style.display = 'none';
+    }
+}
+
+// Function for closing the form for adding a new item on the admin Feeds page
+function closeAddProduct(){
+    let addfeedDiv = document.querySelector('.addFeed');
+
+    addfeedDiv.style.display='none';
+}
+
+// Function for showing a product's details and editing it in the admin pages
 function showDetails(productId){
     let detailDiv = document.getElementById('detail-' +productId);
 

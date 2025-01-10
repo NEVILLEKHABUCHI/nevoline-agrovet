@@ -8,8 +8,8 @@ exports.getAdminFeeds = async(req, res) => {
         const Feeds = await Product.find({productCategory: 'Feeds'});
         res.render('adminFeeds', {title: 'Admin Feeds', Feeds});
     }catch(error){
-        console.error('Error fetching items fromthe database', error);
-        req.flash('error', 'An error occurred while displaying items in the database');
+        console.error('Error fetching items from the database', error);
+        req.flash('error', 'An error occurred while fetching items from the database');
     }
 }
 

@@ -11,6 +11,136 @@ body {
     text-decoration: none;
 }
 
+/* Common styles for the adminFeeds, adminDrugs and adminSeeds page */
+.adminFeedsContainer,
+.adminDrugsContainer {
+    width: 99vw;
+    height: 99vh;
+}
+.adminFeedsContainer .top,
+.adminDrugsContainer .top {
+    width: inherit;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+.adminFeedsContainer .top a,
+.adminDrugsContainer .top a {
+    color: black;
+    border: 1px solid #B2BEB5;
+    padding: 2px;
+}
+.adminFeedsContainer .top .left,
+.adminDrugsContainer .top .left {
+    width: 18vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.adminFeedsContainer .top .left img,
+.adminDrugsContainer .top .left img {
+    width: 18vw;
+    height: 18vh;
+    object-fit: cover;
+}
+.adminFeedsContainer .top .right-1,
+.adminDrugsContainer .top .right-1 {
+    width: 50vw;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adminFeedsContainer .top .right-1 a,
+.adminDrugsContainer .top .right-1 a {
+    font-weight: bold;
+}
+.adminFeedsContainer .top .right-2,
+.adminDrugsContainer .top .right-2 {
+    display: none;
+}
+.adminFeedsContainer .body,
+.adminDrugsContainer .body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: inherit;
+    height: 79vh;
+}
+.adminFeedsContainer .body .body-top,
+.adminDrugsContainer .body .body-top {
+    width: 99vw;
+    height: 50vh;
+    background-image: url('/commonImages/Grass.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adminFeedsContainer .body .body-content .body-contentTop,
+.adminDrugsContainer .body .body-content .body-contentTop {
+    width: inherit;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-content .body-contentTop div,
+.adminDrugsContainer .body .body-content .body-contentTop div {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+}
+.adminFeedsContainer .body .body-content .body-contentTop div button,
+.adminDrugsContainer .body .body-content .body-contentTop div button {
+    border: none;
+    background-color: white;
+}
+.adminFeedsContainer .body .body-content .body-contentTop div h3,
+.adminDrugsContainer .body .body-content .body-contentTop div h3 {
+    color: #228B22;
+    border: 1px solid #228B22;
+}
+.adminFeedsContainer .body .body-content .body-contentTop form input,
+.adminDrugsContainer .body .body-content .body-contentTop form input {
+    width: 30vw;
+    height: 5vh;
+    border: 1.5px solid #228B22;
+    border-radius: 5px;
+}
+.adminFeedsContainer .body .body-top .welcome_message,
+.adminDrugsContainer .body .body-top .welcome_message {
+    height: max-content;
+    background-color: rgb(255, 255, 255,70%);
+    padding: 3px;
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.adminFeedsContainer .body .body-top .welcome_message .alert,
+.adminDrugsContainer .body .body-top .welcome_message .alert {
+    display: flex;
+    justify-content: center;
+    animation: fadeOut 10s forwards;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-top .welcome_message .alert-success
+.adminDrugsContainer .body .body-top .welcome_message .alert-success {
+    color: #1F75FE;
+}
+.adminFeedsContainer .body .body-top .welcome_message .alert-danger
+.adminDrugsContainer .body .body-top .welcome_message .alert-danger {
+    color: red;
+}
 @media only screen  and (max-width:900px){
     body{
         overflow-y: scroll;

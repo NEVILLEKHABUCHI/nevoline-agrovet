@@ -6,6 +6,7 @@ const upload = require('../middlewares/upload'); //Middleware for handling uploa
 // Controllers
 const adminDashboardController = require('../controllers/adminDashboardController');
 const adminFeedsController = require('../controllers/adminFeedsController');
+const adminDrugsController = require('../controllers/adminDrugsController');
 
 // adminDashboard routes
 router.get('/Dashboard', isAuthenticated, adminDashboardController.getAdminDashboard);
@@ -15,5 +16,8 @@ router.get('/Feeds', isAuthenticated, adminFeedsController.getAdminFeeds);
 router.post('/addFeed', isAuthenticated, upload.single('productImage'), adminFeedsController.addFeed);
 router.post('/feed/:id/edit', isAuthenticated, upload.single('productImage'), adminFeedsController.editFeed);
 router.get('/feed/:id/delete', isAuthenticated, upload.single('productImage'), adminFeedsController.deleteFeed);
+
+// adminDrugs routes
+router.get('/Drugs', isAuthenticated, adminDrugsController.getAdminDrugs);
 
 module.exports = router;
