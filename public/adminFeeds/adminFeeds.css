@@ -1,37 +1,4 @@
 
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed {
-    width: 50vw;
-    height: max-content;
-    position: absolute;
-    top: 25vh;
-    left: 20vw;
-    background-color: rgb(0, 0, 0,85%);
-    display: none;
-    /* text-align: start; */
-}
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed #close{
-    background-color: rgb(0, 0, 0,85%);
-    color: white;
-    font-size: 1.5rem;
-}
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div {
-    width: inherit;
-    height: max-content;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2vh;
-}
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form {
-    width: 35vw;
-    padding: 1vw;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255,70%);
-    box-shadow: 5px 5px 15px black;
-}
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form  label {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
 .adminFeedsContainer .body .body-content .body-contentTop .addFeed div form  input {
     width: 30vw;
     height: 5vh;

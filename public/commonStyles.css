@@ -78,6 +78,36 @@ body {
     justify-content: center;
     align-items: center;
 }
+.adminFeedsContainer .body .body-top .welcome_message,
+.adminDrugsContainer .body .body-top .welcome_message {
+    height: max-content;
+    background-color: rgb(255, 255, 255,70%);
+    padding: 3px;
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.adminFeedsContainer .body .body-top .welcome_message .alert,
+.adminDrugsContainer .body .body-top .welcome_message .alert {
+    display: flex;
+    justify-content: center;
+    animation: fadeOut 10s forwards;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.adminFeedsContainer .body .body-top .welcome_message .alert-success
+.adminDrugsContainer .body .body-top .welcome_message .alert-success {
+    color: #1F75FE;
+}
+.adminFeedsContainer .body .body-top .welcome_message .alert-danger
+.adminDrugsContainer .body .body-top .welcome_message .alert-danger {
+    color: red;
+}
 .adminFeedsContainer .body .body-content .body-contentTop,
 .adminDrugsContainer .body .body-content .body-contentTop {
     width: inherit;
@@ -111,35 +141,42 @@ body {
     border: 1.5px solid #228B22;
     border-radius: 5px;
 }
-.adminFeedsContainer .body .body-top .welcome_message,
-.adminDrugsContainer .body .body-top .welcome_message {
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed,
+.adminDrugsContainer .body .body-content .body-contentTop .addDrug {
+    width: 50vw;
     height: max-content;
-    background-color: rgb(255, 255, 255,70%);
-    padding: 3px;
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    background-color: rgb(0, 0, 0, 85%);
+    display: none;
 }
-@keyframes fadeOut {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed #close,
+.adminDrugsContainer .body .body-content .body-contentTop .addDrug #close {
+    background-color: rgb(0, 0, 0, 85%);
+    color: white;
+    font-size: 1.5rem;
 }
-.adminFeedsContainer .body .body-top .welcome_message .alert,
-.adminDrugsContainer .body .body-top .welcome_message .alert {
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div,
+.adminDrugsContainer .body .body-content .body-contentTop .addDrug div {
+    width: inherit;
+    height: max-content;
     display: flex;
     justify-content: center;
-    animation: fadeOut 10s forwards;
-    overflow: hidden;
+    padding-bottom: 2vh;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form,
+.adminDrugsContainer .body .body-content .body-contentTop .addDrug div form {
+    width: 35vw;
+    padding: 1vw;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 70%);
+    box-shadow: 5px 5px 15px black;
+}
+.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form label,
+.adminDrugsContainer .body .body-content .body-contentTop .addDrug div form label {
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.adminFeedsContainer .body .body-top .welcome_message .alert-success
-.adminDrugsContainer .body .body-top .welcome_message .alert-success {
-    color: #1F75FE;
-}
-.adminFeedsContainer .body .body-top .welcome_message .alert-danger
-.adminDrugsContainer .body .body-top .welcome_message .alert-danger {
-    color: red;
+    font-weight: bold;
 }
 @media only screen  and (max-width:900px){
     body{
