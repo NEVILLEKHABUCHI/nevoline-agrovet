@@ -215,7 +215,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .adminFeedsContainer .body .body-content .body-contentBody table th,td,
-.adminDrugssContainer .body .body-content .body-contentBody table th,td {
+.adminDrugsContainer .body .body-content .body-contentBody table th,td {
     border: 1px solid #228B22;
 }
 .adminFeedsContainer .body .body-content .body-contentBody table tr th:first-of-type,
@@ -242,6 +242,46 @@ body {
 .adminDrugsContainer .body .body-content .body-contentBody table tr td {
     text-align: center;
     padding: 0.5vw;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td img,
+.adminDrugsContainer .body .body-content .body-contentBody table tr td img {
+    width: 12vw;
+    height: 12vh;
+    object-fit: cover;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td button,
+.adminDrugsContainer .body .body-content .body-contentBody table tr td button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0.2vw;
+    border: none;
+    color: white;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td button:first-of-type,
+.adminDrugsContainer .body .body-content .body-contentBody table tr td button:first-of-type {
+    background-color: #228B22;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table tr td button:nth-of-type(2),
+.adminDrugsContainer .body .body-content .body-contentBody table tr td button:nth-of-type(2) {
+    background-color: red;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail {
+    width: 50vw;
+    height: max-content;
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    background-color: rgb(0, 0, 0, 85%);
+    display: none;
+    text-align: start;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail #close,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail #close {
+    background-color: rgb(0, 0, 0, 85%);
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail p button,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail p button {
+    font-size: 1.5rem;
 }
 @media only screen  and (max-width:900px){
     body{
