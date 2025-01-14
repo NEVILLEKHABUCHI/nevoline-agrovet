@@ -22,20 +22,21 @@ function closeRight1(){
 
 // Functions for showing the form for adding a new item on the admin pages
 function showAddProduct(){
-    let addfeedDiv = document.querySelector('.addFeed');
+    console.log("Hello Neville");
+    let addProductDiv = document.querySelector('.addProduct');
 
-    if(addfeedDiv.style.display === 'none' || addfeedDiv.style.display === ''){
-        addfeedDiv.style.display = 'block';
+    if(addProductDiv.style.display === 'none' || addProductDiv.style.display === ''){
+        addProductDiv.style.display = 'block';
     }else {
-        addfeedDiv.style.display = 'none';
+        addProductDiv.style.display = 'none';
     }
 }
 
 // Function for closing the form for adding a new item on the admin Feeds page
 function closeAddProduct(){
-    let addfeedDiv = document.querySelector('.addFeed');
+    let addProductDiv = document.querySelector('.addProduct');
 
-    addfeedDiv.style.display='none';
+    addProductDiv.style.display='none';
 }
 
 // Function for showing a product's details and editing it in the admin pages

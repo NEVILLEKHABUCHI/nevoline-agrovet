@@ -141,8 +141,8 @@ body {
     border: 1.5px solid #228B22;
     border-radius: 5px;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct {
     width: 50vw;
     height: max-content;
     position: absolute;
@@ -151,35 +151,35 @@ body {
     background-color: rgb(0, 0, 0, 85%);
     display: none;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed #close,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug #close {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct #close,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct #close {
     background-color: rgb(0, 0, 0, 85%);
     color: white;
     font-size: 1.5rem;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug div {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct div,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct div {
     width: inherit;
     height: max-content;
     display: flex;
     justify-content: center;
     padding-bottom: 2vh;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug div form {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form {
     width: 35vw;
     padding: 1vw;
     border-radius: 10px;
     background-color: rgb(255, 255, 255, 70%);
     box-shadow: 5px 5px 15px black;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form label,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug div form label {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form label,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form label {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form input,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug div form input {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form input,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form input {
     width: 30vw;
     height: 5vh;
     margin-left: 1vw;
@@ -189,8 +189,8 @@ body {
     box-shadow: 5px 5px 15px black;
     border: none;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addFeed div form .button button,
-.adminDrugsContainer .body .body-content .body-contentTop .addDrug div form .button button {
+.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form .button button,
+.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form .button button {
     background-color: #03C03C;
     color: white;
     padding: 0.5vw;
@@ -283,9 +283,137 @@ body {
 .adminDrugsContainer .body .body-content .body-contentBody table .productDetail p button {
     font-size: 1.5rem;
 }
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vh;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form {
+    padding: 1vw;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 70%);
+    box-shadow: 5px 5px 15px black;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form label,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form input,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form input {
+    width: 30vw;
+    height: 5vh;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px black;
+    border: none;
+}
+.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form .button button,
+.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form .button button {
+    background-color: #03C03C;
+    color: white;
+    padding: 0.5vw;
+    border-radius: 5px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 @media only screen  and (max-width:900px){
     body{
         overflow-y: scroll;
         overflow-x: hidden;
     }
+    /* Media querying the admin pages */
+    .adminFeedsContainer .top,
+    .adminDrugsContainer .top {
+        width: inherit;
+        height: 10vh;
+    }
+    .adminFeedsContainer .top .left,
+    .adminDrugsContainer .top .left {
+        width: 30vw;
+        height: inherit;
+    }
+    .adminFeedsContainer .top .left img,
+    .adminDrugsContainer .top .left img {
+        width: 30vw;
+        height: 10vh;
+        object-fit: cover;
+    }
+    .adminFeedsContainer .top .right-1,
+    .adminDrugsContainer .top .right-1 {
+        width: 99vw;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10.5vh;
+        background-color: rgb(255, 255, 255, 70%);
+        display: none;
+    }
+    .adminFeedsContainer .top .right-2,
+    .adminDrugsContainer .top .right-2 {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+    .adminFeedsContainer .top .right-2 button,
+    .adminDrugsContainer .top .right-2 button {
+        font-size: 2rem;
+        border: none;
+        background-color: white;
+        color: black;
+    }
+    .adminFeedsContainer .top .right-2 button:nth-of-type(2),
+    .adminDrugsContainer .top .right-2 button:nth-of-type(2) {
+        display: none;
+    }
+    .adminFeedsContainer .body,
+    .adminDrugsContainer .body {
+        height: 89vh;
+    }
+    .adminFeedsContainer .body .body-top,
+    .adminDrugsContainer .body .body-top {
+        width: 99vw;
+        height: 50vh;
+    }
+    .adminFeedsContainer .body .body-top div,
+    .adminDrugsContainer .body .body-top div {
+        width: 55vw;
+        padding: 3px;
+        text-align: center;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop,
+    .adminDrugsContainer .body .body-content .body-contentTop {
+        margin-top: 2vh;
+        width: inherit;
+        height: 7vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop div,
+    .adminDrugsContainer .body .body-content .body-contentTop div {
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop form input,
+    .adminDrugsContainer .body .body-content .body-contentTop form input {
+        width: 70vw;
+        height: 3vh;
+        border: 1.5px solid #228B22;
+        border-radius: 5px;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop form button,
+    .adminDrugsContainer .body .body-content .body-contentTop form button {
+        padding: 0.5vw;
+        border: none;
+        border-radius: 2px;
+    }
+
 }
