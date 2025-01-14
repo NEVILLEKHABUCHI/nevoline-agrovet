@@ -346,7 +346,7 @@ body {
     }
     .adminFeedsContainer .top .right-1,
     .adminDrugsContainer .top .right-1 {
-        width: 99vw;
+        width: 100vw;
         height: 30vh;
         display: flex;
         flex-direction: column;
@@ -414,6 +414,81 @@ body {
         padding: 0.5vw;
         border: none;
         border-radius: 2px;
+        background-color: #228B22;
+        color: white;
     }
+    .adminFeedsContainer .body .body-content .body-contentBody,
+    .adminDrugsContainer .body .body-content .body-contentBody {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5vh;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table,
+    .adminDrugsContainer .body .body-content .body-contentBody table {
+        border-collapse: collapse;
+        width: 200vw;
+        border: 1px solid #228B22;
+        table-layout: fixed;
+        margin-left: 106vw;
+        margin-right: 2vw;
+        margin-bottom: 5vh;
+    }
+    th,td {
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 1px solid #228B22;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:first-of-type,
+    .adminDrugsContainer .body .body-content .body-contentBody table tr th:first-of-type {
+        width: 35vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2),
+    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2) {
+        width: 75vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3),
+    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3) {
+        width: 30vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4),
+    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4) {
+        width: 30vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5),
+    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5) {
+        width: 30vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table tr td img,
+    .adminDrugsContainer .body .body-content .body-contentBody table tr td img {
+        width: 30vw;
+        height: 15vh;
+        object-fit: cover;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table .productDetail,
+    .adminDrugsContainer .body .body-content .body-contentBody table .productDetail {
+        width: 90vw;
+        height: max-content;
+        position: absolute;
+        top: 25vh;
+        left: 4vw;
+    }
+    .adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form input,
+    .adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form input {
+        width: 70vw;
+        height: 4vh;
+    }
+    .adminFeedsContainer .body .body-content .body-contentTop .addProduct,
+    .adminDrugsContainer .body .body-content .body-contentTop .addProduct {
+        width: 90vw;
+        height: max-content;
+        position: absolute;
+        top: 25vh;
+        left: 4vw;
+    }
+
 
 }

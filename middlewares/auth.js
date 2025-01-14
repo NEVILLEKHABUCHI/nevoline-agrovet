@@ -4,6 +4,6 @@ exports.isAuthenticated = (req, res, next) => {
     }else{
         // Send an error message
         req.flash('error', 'Your session has expired. Please Log in again');
-        res.redirect('/login'); //Redirect to login page if not authenticated
+        res.redirect('/auth/login'); //Redirect to login page if not authenticated
     }
 }
