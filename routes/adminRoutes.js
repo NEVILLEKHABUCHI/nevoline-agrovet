@@ -19,5 +19,8 @@ router.get('/feed/:id/delete', isAuthenticated, upload.single('productImage'), a
 
 // adminDrugs routes
 router.get('/Drugs', isAuthenticated, adminDrugsController.getAdminDrugs);
+router.post('/addDrug', isAuthenticated, upload.single('productImage'), adminDrugsController.addDrug);
+router.post('/drug/:id/edit', isAuthenticated, upload.single('productImage'), adminDrugsController.editDrug);
+router.get('/drug/:id/delete', isAuthenticated, upload.single('productImage'), adminDrugsController.deleteDrug);
 
 module.exports = router;

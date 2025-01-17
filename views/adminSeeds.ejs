@@ -5,21 +5,21 @@
         
     </head>
 <body>
-    <div class="adminFeedsContainer">
+    <div class="adminSeedsContainer">
         <div class="top">
             <%-include('./partials/adminTabs.ejs')  %>
         </div>
         <div class="body">
             <div class="body-top">
                 <div class="welcome_message">
-                    <h1>ADMIN FEEDS</h1>
+                    <h1>ADMIN SEEDS</h1>
                     <%-include('./partials/succesS_errorMessage.ejs')  %>
                 </div>
             </div>
             <div class="body-content">
                 <div class="body-contentTop">
                     <div>
-                        <button onclick="showAddProduct()"><h3>ADD FEED</h3></button>
+                        <button onclick="showAddProduct()"><h3>ADD SEED</h3></button>
                         <h3>HISTORY</h3>
                     </div>
                     <form action="" method="">
@@ -28,17 +28,17 @@
                     <div class="addProduct">
                         <p><button id="close" onclick="closeAddProduct()"><i class="fa-solid fa-x"></i></button></p>
                         <div>
-                            <form action="/admin/addFeed" method="POST" enctype="multipart/form-data">
-                                <label for="image">FEED IMAGE</label><br>
+                            <form action="/admin/addSeed" method="POST" enctype="multipart/form-data">
+                                <label for="image">SEED IMAGE</label><br>
                                 <input type="file" id="productImage" name="productImage"><br>
 
-                                <label for="name">FEED NAME</label><br>
+                                <label for="name">SEED NAME</label><br>
                                 <input type="text" id="productName" name="productName"><br>
 
-                                <label for="price">FEED PRICE</label><br>
+                                <label for="price">SEED PRICE</label><br>
                                 <input type="text" id="productPrice" name="productPrice"><br>
 
-                                <label for="quantity">FEED QUANTITY</label><br>
+                                <label for="quantity">SEED QUANTITY</label><br>
                                 <input type="text" id="productQuantity" name="productQuantity"><br>
 
                                 <input type="hidden" id="productCategory" name="productCategory" value="Feeds">
@@ -59,26 +59,26 @@
                             <th>QUANTITY</th>
                             <th>ACTION</th>
                         </tr>
-                       <% Feeds.forEach((Feed)=>{ %>
+                       <% Seeds.forEach((Seed)=>{ %>
                         <tr>
-                            <td><img src="data:image/png;base64,<%=Feed.productImage%>" alt=""></td>
-                            <td><%=Feed.productName %></td>
-                            <td><%=Feed.productPrice %></td>
-                            <td><%=Feed.productQuantity %></td>
+                            <td><img src="data:image/png;base64,<%=Seed.productImage%>" alt=""></td>
+                            <td><%=Seed.productName %></td>
+                            <td><%=Seed.productPrice %></td>
+                            <td><%=Seed.productQuantity %></td>
                             <td>
-                                <button onclick="showDetails('<%= Feed._id %>')">EDIT</button>
-                                <div class="productDetail" id="detail-<%=Feed._id %>">
+                                <button onclick="showDetails('<%= Seed._id %>')">EDIT</button>
+                                <div class="productDetail" id="detail-<%=Seed._id %>">
                                     <p><button id="close"><i class="fa-solid fa-x"></i></button></p>
                                     <div>
-                                        <form action="/admin/feed/<%= Feed._id %>/edit" method="post" enctype="multipart/form-data">
-                                            <label for="image">FEED IMAGE</label><br>
-                                            <input type="file" id="image" name="productImage" value="<%= Feed.productImage %>"><br>
+                                        <form action="/admin/seed/<%= Seed._id %>/edit" method="post" enctype="multipart/form-data">
+                                            <label for="image">SEED IMAGE</label><br>
+                                            <input type="file" id="image" name="productImage" value="<%= Seed.productImage %>"><br>
         
-                                            <label for="name">FEED NAME</label><br>
-                                            <input type="text" id="name" name="productName" value="<%= Feed.productName %>"><br>
+                                            <label for="name">SEED NAME</label><br>
+                                            <input type="text" id="name" name="productName" value="<%= Seed.productName %>"><br>
         
                                             <label for="price">FEED PRICE</label><br>
-                                            <input type="text" id="price" name="productPrice" value="<%= Feed.productPrice %>"><br>
+                                            <input type="text" id="price" name="productPrice" value="<%= Seed.productPrice %>"><br>
         
                                             <label for="quantity">FEED QUANTITY</label><br>
                                             <input type="text" id="quantity" name="productQuantity" value="<%= Feed.productQuantity %>"><br>

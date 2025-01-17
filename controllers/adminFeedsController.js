@@ -37,7 +37,7 @@ exports.addFeed = async(req, res) => {
             res.redirect('/admin/Feeds');
         }
     } catch(error){
-        console.error('Error while adding the product', err);
+        console.error('Error while adding the product', error);
         req.flash('error', 'Error while adding the product');
         res.redirect('/admin/Feeds');
     }
@@ -77,7 +77,7 @@ exports.deleteFeed = async(req, res) => {
         res.redirect('/admin/Feeds');
     }catch(error){
         // Send error message
-        req.flash('error', 'Failed to update the product');
+        req.flash('error', 'Failed to delete the product');
         res.redirect('/admin/Feeds');
     }
 }
