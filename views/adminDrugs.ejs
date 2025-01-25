@@ -23,12 +23,12 @@
                         <h3>HISTORY</h3>
                     </div>
                     <form action="" method="">
-                        <input type="text" name="query" placeholder="Search for products">
+                        <input id= "searchInput" type="text" name="query" placeholder="Search for products">
                     </form>
                     <div class="addProduct">
                         <p><button id="close" onclick="closeAddProduct()"><i class="fa-solid fa-x"></i></button></p>
                         <div>
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <form action="/admin/addDrug" method="post" enctype="multipart/form-data">
                                 <label for="image">DRUG IMAGE</label><br>
                                 <input type="file" id="productImage" name="productImage"><br>
 
@@ -66,21 +66,21 @@
                             <td><%=Drug.productPrice %></td>
                             <td><%=Drug.productQuantity %></td>
                             <td>
-                                <button>EDIT</button>
+                                <button onclick="showDetails('<%= Drug._id %>')">EDIT</button>
                                 <div class="productDetail" id="detail-<%=Drug._id %>">
                                     <p><button id="close"><i class="fa-solid fa-x"></i></button></p>
                                     <div>
-                                        <form action="" method="post" enctype="multipart/form-data">
-                                            <label for="image">FEED IMAGE</label><br>
+                                        <form action="/admin/drug/<%= Drug._id  %>/edit" method="post" enctype="multipart/form-data">
+                                            <label for="image">DRUG IMAGE</label><br>
                                             <input type="file" id="image" name="productImage" value="<%=Drug.productImage %>"><br>
         
-                                            <label for="name">FEED NAME</label><br>
+                                            <label for="name">DRUG NAME</label><br>
                                             <input type="text" id="name" name="productName" value="<%=Drug.productName %>"><br>
         
-                                            <label for="price">FEED PRICE</label><br>
+                                            <label for="price">DRUG PRICE</label><br>
                                             <input type="text" id="price" name="productPrice" value="<%=Drug.productPrice %>"><br>
         
-                                            <label for="quantity">FEED QUANTITY</label><br>
+                                            <label for="quantity">DRUG QUANTITY</label><br>
                                             <input type="text" id="quantity" name="productQuantity" value="<%=Drug.productQuantity %>"><br>
 
 
@@ -90,7 +90,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <button>DELETE</button>
+                                <button onclick="confirmDeleteDrug('<%= Drug._id %>')">DELETE</button>
                             </td>
                         </tr>
                

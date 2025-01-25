@@ -44,8 +44,8 @@ exports.addDrug = async(req, res) => {
     }
 }
 
-// Edit a drug product
-exports.editFeed = async(req, res) => {
+// // Edit a drug product
+exports.editDrug = async(req, res) => {
 
     const {productName, productPrice, productQuantity, productCategory} = req.body;
     const updateData = {productName, productPrice, productQuantity, productCategory};
@@ -67,8 +67,8 @@ exports.editFeed = async(req, res) => {
     }
 }
 
-// Delete drug product
-exports.deleteFeed = async(req, res) => {
+// // Delete drug product
+exports.deleteDrug = async(req, res) => {
     try {
         await Product.findByIdAndDelete(req.params.id);
 

@@ -100,11 +100,11 @@ body {
     overflow: hidden;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.adminFeedsContainer .body .body-top .welcome_message .alert-success
+.adminFeedsContainer .body .body-top .welcome_message .alert-success,
 .adminDrugsContainer .body .body-top .welcome_message .alert-success {
     color: #1F75FE;
 }
-.adminFeedsContainer .body .body-top .welcome_message .alert-danger
+.adminFeedsContainer .body .body-top .welcome_message .alert-danger,
 .adminDrugsContainer .body .body-top .welcome_message .alert-danger {
     color: red;
 }
