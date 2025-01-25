@@ -11,12 +11,14 @@ body {
     text-decoration: none;
 }
 
-/* Common styles for the adminFeeds, adminDrugs and adminSeeds page */
+/* Common styles for the adminDashboard, adminFeeds, adminDrugs and adminSeeds page */
+.adminContainer,
 .adminFeedsContainer,
 .adminDrugsContainer {
     width: 99vw;
     height: 99vh;
 }
+.adminContainer .top, 
 .adminFeedsContainer .top,
 .adminDrugsContainer .top {
     width: inherit;
@@ -25,12 +27,14 @@ body {
     justify-content: space-between;
     padding: 0 1vw;
 }
+.adminContainer .top a,
 .adminFeedsContainer .top a,
 .adminDrugsContainer .top a {
     color: black;
     border: 1px solid #B2BEB5;
     padding: 2px;
 }
+.adminContainer .top .left,
 .adminFeedsContainer .top .left,
 .adminDrugsContainer .top .left {
     width: 18vw;
@@ -38,12 +42,14 @@ body {
     display: flex;
     align-items: center;
 }
+.adminContainer .top .left img,
 .adminFeedsContainer .top .left img,
 .adminDrugsContainer .top .left img {
     width: 18vw;
     height: 18vh;
     object-fit: cover;
 }
+.adminContainer .top .right-1,
 .adminFeedsContainer .top .right-1,
 .adminDrugsContainer .top .right-1 {
     width: 50vw;
@@ -52,14 +58,17 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.adminContainer .top .right-1 a, 
 .adminFeedsContainer .top .right-1 a,
 .adminDrugsContainer .top .right-1 a {
     font-weight: bold;
 }
+.adminContainer .top .right-2,
 .adminFeedsContainer .top .right-2,
 .adminDrugsContainer .top .right-2 {
     display: none;
 }
+.adminContainer .top .body,
 .adminFeedsContainer .body,
 .adminDrugsContainer .body {
     overflow-y: scroll;
@@ -67,6 +76,7 @@ body {
     width: inherit;
     height: 79vh;
 }
+.adminContainer .body .body-top,
 .adminFeedsContainer .body .body-top,
 .adminDrugsContainer .body .body-top {
     width: 99vw;
@@ -328,22 +338,26 @@ body {
         overflow-x: hidden;
     }
     /* Media querying the admin pages */
+    .adminContainer .top,
     .adminFeedsContainer .top,
     .adminDrugsContainer .top {
         width: inherit;
         height: 10vh;
     }
+    .adminContainer .top .left,
     .adminFeedsContainer .top .left,
     .adminDrugsContainer .top .left {
         width: 30vw;
         height: inherit;
     }
+    .adminContainer .top .left img,
     .adminFeedsContainer .top .left img,
     .adminDrugsContainer .top .left img {
         width: 30vw;
         height: 10vh;
         object-fit: cover;
     }
+    .adminContainer .top .right-1,
     .adminFeedsContainer .top .right-1,
     .adminDrugsContainer .top .right-1 {
         width: 100vw;
@@ -355,12 +369,14 @@ body {
         background-color: rgb(255, 255, 255, 70%);
         display: none;
     }
+    .adminContainer .top .right-2,
     .adminFeedsContainer .top .right-2,
     .adminDrugsContainer .top .right-2 {
         display: block;
         display: flex;
         align-items: center;
     }
+    .adminContainer .top .right-2 button, 
     .adminFeedsContainer .top .right-2 button,
     .adminDrugsContainer .top .right-2 button {
         font-size: 2rem;
@@ -368,19 +384,23 @@ body {
         background-color: white;
         color: black;
     }
+    .adminContainer .top .right-2 button:nth-of-type(2),
     .adminFeedsContainer .top .right-2 button:nth-of-type(2),
     .adminDrugsContainer .top .right-2 button:nth-of-type(2) {
         display: none;
     }
+    .adminContainer .body,
     .adminFeedsContainer .body,
     .adminDrugsContainer .body {
         height: 89vh;
     }
+    .adminContainer .body .body-top,
     .adminFeedsContainer .body .body-top,
     .adminDrugsContainer .body .body-top {
         width: 99vw;
         height: 50vh;
     }
+    .adminContainer .body .body-top div,
     .adminFeedsContainer .body .body-top div,
     .adminDrugsContainer .body .body-top div {
         width: 55vw;
