@@ -1,20 +1,19 @@
 const Product = require('../models/product');
 
-
-// Render adminFeeds page and fetch products from mongoDB where productCategpry = 'Drugs'
-exports.getAdminDrugs = async(req, res) => {
+// Render adminMachineries page and fetch products from mongoDB where productCategory = 'Machineries'
+exports.getAdminMachineries = async(req, res) => {
     try {
         // Query the database to fetch product details
-        const Drugs = await Product.find({productCategory: 'Drugs'});
-        res.render('adminDrugs', {title: 'Admin Drugs', Drugs});
+        const Drugs = await Product.find({productCategory: 'Machineries'});
+        res.render('adminMachineries', {title: 'Admin Machineries', Machineries});
     }catch(error){
         console.error('Error fetching items from the database', error);
         req.flash('error', 'An error occurred while fetching items from the database');
     }
 }
 
-// Add a new drug product
-exports.addDrug = async(req, res) => {
+// Add a new machinery product
+exports.addMachinery = async(req, res) => {
     try {
         const {productName, productPrice, productQuantity, productCategory} = req.body;
         const productImage = req.file.buffer.toString('base64');
@@ -22,7 +21,7 @@ exports.addDrug = async(req, res) => {
         // Validate form inputs
         if(!productImage || !productName || !productPrice || !productQuantity || !productCategory){
             // Send error message
-            req.flash('error', 'Kindly fill in all the fields');
+            req.flash('error', 'Kindly fill in all the fileds');
             return;
         }
         else {
@@ -35,49 +34,48 @@ exports.addDrug = async(req, res) => {
             });
             await newProduct.save();
             req.flash('success', 'Product added successfully');
-            res.redirect('/admin/Drugs');
+            res.redirect('/admin/Machineries');
         }
-    } catch(error){
+    }catch(error){
         console.error('Error while adding the product', error);
         req.flash('error', 'Error while adding the product');
-        res.redirect('/admin/Drugs');
+        res.redirect('/admin/Machineries');
     }
 }
 
-// // Edit a drug product
-exports.editDrug = async(req, res) => {
+// Edit a machinery product
+exports.editMachinery = async(req, res) => {
 
     const {productName, productPrice, productQuantity, productCategory} = req.body;
     const updateData = {productName, productPrice, productQuantity, productCategory};
 
     if(req.file){
-        updateData.productImage = req.file.buffer.toString('base64');
+         updateData = {productName, productPrice, productQuantity, productCategory};
     }
-
     try {
         await Product.findByIdAndUpdate(req.params.id, updateData);
 
         // Send success message
         req.flash('success', 'Product updated successfully');
-        res.redirect('/admin/Drugs');
-    } catch(error){
+        res.redirect('/admin/Machineries');
+    }catch(error){
         // Send error message
         req.flash('error', 'Failed to update the product');
-        res.redirect('/admin/Drugs');
+        res.redirect('/admin/Machineries');
     }
 }
 
-// // Delete drug product
-exports.deleteDrug = async(req, res) => {
+// Delete machinery product
+exports.deleteMachinery = async(req, res) => {
     try {
-        await Product.findByIdAndDelete(req.params.id);
+        await Product.findByIdAndDelete(reg.params.id);
 
         // Send success message
         req.flash('success', 'Product deleted successfully');
-        res.redirect('/admin/Drugs');
-    } catch(error) {
+        res.redirect('/admin/Machineries');
+    }catch(error) {
         // Send error message
-        req.flash('error', 'Failed to delete the product');
-        res.redirect('/admin/Drugs');
+        req.flash('error', 'Failed to delete the product ');
+        res.redirect('/admin/Machineries');
     }
 }

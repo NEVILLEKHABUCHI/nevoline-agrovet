@@ -12,6 +12,8 @@ body {
 }
 
 /* Common styles for the signup and login page */
+.homeContainer,
+.aboutContainer,
 .signupContainer,
 .loginContainer {
     width: 99vw;
@@ -84,7 +86,8 @@ body {
     display: flex;
     justify-content: center;
 }
-.signupContainer .body .bo y-content .content form .button button {
+.signupContainer .body .body-content .content form .button button,
+.loginContainer .body .body-content .content form .button button {
     background-color: #03C03C;
     color: white;
     padding: 0.5vw;
@@ -105,13 +108,15 @@ body {
     color: #03C03C;
 }
 
-/* Common styles for the signup page, log in page,  adminDashboard, adminFeeds, adminDrugs and adminSeeds page */
+/* Common styles for the home page, signup page, log in page,  adminDashboard, adminFeeds, adminDrugs and adminSeeds page */
 .adminContainer,
 .adminFeedsContainer,
 .adminDrugsContainer {
     width: 99vw;
     height: 99vh;
 }
+.homeContainer .top,
+.aboutContainer .top,
 .signupContainer .top,
 .loginContainer .top,
 .adminContainer .top, 
@@ -123,6 +128,8 @@ body {
     justify-content: space-between;
     padding: 0 1vw;
 }
+.homeContainer .top a,
+.aboutContainer .top a,
 .signupContainer .top a,
 .loginContainer .top a,
 .adminContainer .top a,
@@ -132,6 +139,8 @@ body {
     border: 1px solid #B2BEB5;
     padding: 2px;
 }
+.homeContainer .top .left,
+.aboutContainer .top .left,
 .signupContainer .top .left,
 .loginContainer .top .left,
 .adminContainer .top .left,
@@ -142,6 +151,8 @@ body {
     display: flex;
     align-items: center;
 }
+.homeContainer .top .left img,
+.aboutContainer .top .left img,
 .signupContainer .top .left img,
 .loginContainer .top .left img,
 .adminContainer .top .left img,
@@ -151,6 +162,8 @@ body {
     height: 18vh;
     object-fit: cover;
 }
+.homeContainer .top .right-1,
+.aboutContainer .top .right-1,
 .signupContainer .top .right-1,
 .loginContainer .top .right-1,
 .adminContainer .top .right-1,
@@ -162,6 +175,8 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.homeContainer .top .right-1 a,
+.aboutContainer .top .right-1 a,
 .signupContainer .top .right-1 a,
 .loginContainer .top .right-1 a,
 .adminContainer .top .right-1 a, 
@@ -169,6 +184,8 @@ body {
 .adminDrugsContainer .top .right-1 a {
     font-weight: bold;
 }
+.homeContainer .top .right-2,
+.aboutContainer .top .right-2,
 .signupContainer .top .right-2,
 .loginContainer .top .right-2,
 .adminContainer .top .right-2,

@@ -1,43 +1,4 @@
-.aboutContainer{
-    width: 99vw;
-    height: max-content;
-}
-.aboutContainer .top {
-    width: inherit;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1vw;
-}
-.aboutContainer .top a {
-    color: black;
-    border: 1px solid #B2BEB5;
-    padding: 2px;
-}
-.aboutContainer .top .left{
-    width: 18vw;
-    height: inherit;
-    display: flex;
-    align-items: center;
-}
-.aboutContainer .top .left img{
-    width: 18vw;
-    height: 18vh;
-    object-fit: cover;
-}
-.aboutContainer .top .right-1{
-    width: 50vw;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.aboutContainer .top .right-1 a {
-    font-weight: bold;
-}
-.aboutContainer .top .right-2{
-    display: none;
-}
+
 .aboutContainer .body .body-top {
     width: 99vw;
     height: 50vh;  
