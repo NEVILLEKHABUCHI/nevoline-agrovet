@@ -110,8 +110,7 @@ body {
 
 /* Common styles for the home page, signup page, log in page,  adminDashboard, adminFeeds, adminDrugs and adminSeeds page */
 .adminContainer,
-.adminFeedsContainer,
-.adminDrugsContainer {
+.adminProductsContainer {
     width: 99vw;
     height: 99vh;
 }
@@ -120,8 +119,7 @@ body {
 .signupContainer .top,
 .loginContainer .top,
 .adminContainer .top, 
-.adminFeedsContainer .top,
-.adminDrugsContainer .top {
+.adminProductsContainer .top{
     width: inherit;
     height: 20vh;
     display: flex;
@@ -133,8 +131,7 @@ body {
 .signupContainer .top a,
 .loginContainer .top a,
 .adminContainer .top a,
-.adminFeedsContainer .top a,
-.adminDrugsContainer .top a {
+.adminProductsContainer .top a {
     color: black;
     border: 1px solid #B2BEB5;
     padding: 2px;
@@ -144,8 +141,7 @@ body {
 .signupContainer .top .left,
 .loginContainer .top .left,
 .adminContainer .top .left,
-.adminFeedsContainer .top .left,
-.adminDrugsContainer .top .left {
+.adminProductsContainer .top .left {
     width: 18vw;
     height: inherit;
     display: flex;
@@ -156,8 +152,7 @@ body {
 .signupContainer .top .left img,
 .loginContainer .top .left img,
 .adminContainer .top .left img,
-.adminFeedsContainer .top .left img,
-.adminDrugsContainer .top .left img {
+.adminProductsContainer .top .left img {
     width: 18vw;
     height: 18vh;
     object-fit: cover;
@@ -167,8 +162,7 @@ body {
 .signupContainer .top .right-1,
 .loginContainer .top .right-1,
 .adminContainer .top .right-1,
-.adminFeedsContainer .top .right-1,
-.adminDrugsContainer .top .right-1 {
+.adminProductsContainer .top .right-1 {
     width: 50vw;
     height: inherit;
     display: flex;
@@ -180,8 +174,7 @@ body {
 .signupContainer .top .right-1 a,
 .loginContainer .top .right-1 a,
 .adminContainer .top .right-1 a, 
-.adminFeedsContainer .top .right-1 a,
-.adminDrugsContainer .top .right-1 a {
+.adminProductsContainer .top .right-1 a  {
     font-weight: bold;
 }
 .homeContainer .top .right-2,
@@ -189,21 +182,18 @@ body {
 .signupContainer .top .right-2,
 .loginContainer .top .right-2,
 .adminContainer .top .right-2,
-.adminFeedsContainer .top .right-2,
-.adminDrugsContainer .top .right-2 {
+.adminProductsContainer .top .right-2 {
     display: none;
 }
 .adminContainer .top .body,
-.adminFeedsContainer .body,
-.adminDrugsContainer .body {
+.adminProductsContainer .top .body {
     overflow-y: scroll;
     overflow-x: hidden;
     width: inherit;
     height: 79vh;
 }
 .adminContainer .body .body-top,
-.adminFeedsContainer .body .body-top,
-.adminDrugsContainer .body .body-top {
+.adminProductsContainer .body .body-top {
     width: 99vw;
     height: 50vh;
     background-image: url('/commonImages/Grass.jpg');
@@ -213,8 +203,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.adminFeedsContainer .body .body-top .welcome_message,
-.adminDrugsContainer .body .body-top .welcome_message {
+.adminProductsContainer .body .body-top .welcome_message {
     height: max-content;
     background-color: rgb(255, 255, 255,70%);
     padding: 3px;
@@ -229,8 +218,7 @@ body {
 }
 .signupContainer .body .body-content .content .alert,
 .loginContainer .body .body-content .content .alert,
-.adminFeedsContainer .body .body-top .welcome_message .alert,
-.adminDrugsContainer .body .body-top .welcome_message .alert {
+.adminProductsContainer .body .body-top .welcome_message .alert {
     display: flex;
     justify-content: center;
     animation: fadeOut 10s forwards;
@@ -239,18 +227,15 @@ body {
 }
 .signupContainer .body .body-content .content .alert-success,
 .loginContainer .body .body-content .content .alert-success,
-.adminFeedsContainer .body .body-top .welcome_message .alert-success,
-.adminDrugsContainer .body .body-top .welcome_message .alert-success {
+.adminProductsContainer .body .body-top .welcome_message .alert-success {
     color: #1F75FE;
 }
 .signupContainer .body .body-content .content .alert-danger,
 .loginContainer .body .body-content .content .alert-danger,
-.adminFeedsContainer .body .body-top .welcome_message .alert-danger,
-.adminDrugsContainer .body .body-top .welcome_message .alert-danger {
+.adminProductsContainer .body .body-top .welcome_message .alert-danger {
     color: red;
 }
-.adminFeedsContainer .body .body-content .body-contentTop,
-.adminDrugsContainer .body .body-content .body-contentTop {
+.adminProductsContainer .body .body-content .body-contentTop {
     width: inherit;
     height: 10vh;
     display: flex;
@@ -259,31 +244,26 @@ body {
     padding: 0 2vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.adminFeedsContainer .body .body-content .body-contentTop div,
-.adminDrugsContainer .body .body-content .body-contentTop div {
+.adminProductsContainer .body .body-content .body-contentTop div {
     display: flex;
     justify-content: space-between;
     width: 50vw;
 }
-.adminFeedsContainer .body .body-content .body-contentTop div button,
-.adminDrugsContainer .body .body-content .body-contentTop div button {
+.adminProductsContainer .body .body-content .body-contentTop div button {
     border: none;
     background-color: white;
 }
-.adminFeedsContainer .body .body-content .body-contentTop div h3,
-.adminDrugsContainer .body .body-content .body-contentTop div h3 {
+.adminProductsContainer .body .body-content .body-contentTop div h3 {
     color: #228B22;
     border: 1px solid #228B22;
 }
-.adminFeedsContainer .body .body-content .body-contentTop form input,
-.adminDrugsContainer .body .body-content .body-contentTop form input {
+.adminProductsContainer .body .body-content .body-contentTop form input {
     width: 30vw;
     height: 5vh;
     border: 1.5px solid #228B22;
     border-radius: 5px;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct {
     width: 50vw;
     height: max-content;
     position: absolute;
@@ -292,35 +272,30 @@ body {
     background-color: rgb(0, 0, 0, 85%);
     display: none;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct #close,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct #close {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct #close {
     background-color: rgb(0, 0, 0, 85%);
     color: white;
     font-size: 1.5rem;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct div,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct div {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct div {
     width: inherit;
     height: max-content;
     display: flex;
     justify-content: center;
     padding-bottom: 2vh;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct div form {
     width: 35vw;
     padding: 1vw;
     border-radius: 10px;
     background-color: rgb(255, 255, 255, 70%);
     box-shadow: 5px 5px 15px black;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form label,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form label {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct div form label {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form input,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form input {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct div form input {
     width: 30vw;
     height: 5vh;
     margin-left: 1vw;
@@ -330,8 +305,7 @@ body {
     box-shadow: 5px 5px 15px black;
     border: none;
 }
-.adminFeedsContainer .body .body-content .body-contentTop .addProduct div form .button button,
-.adminDrugsContainer .body .body-content .body-contentTop .addProduct div form .button button {
+.adminProductsContainer .body .body-content .body-contentTop .addProduct div form .button button {
     background-color: #03C03C;
     color: white;
     padding: 0.5vw;
@@ -339,8 +313,7 @@ body {
     border: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.adminFeedsContainer .body .body-content .body-contentBody,
-.adminDrugsContainer .body .body-content .body-contentBody {
+.adminProductsContainer .body .body-content .body-contentBody {
     padding-top: 1vh;
     display: flex;
     justify-content: center;
@@ -348,65 +321,52 @@ body {
     box-sizing: border-box;
     padding-bottom: 4vh;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table,
-.adminDrugsContainer .body .body-content .body-contentBody table {
+.adminProductsContainer .body .body-content .body-contentBody table {
     border-collapse: collapse;
     width: 80vw;
     border: 1px solid #228B22;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table th,td,
-.adminDrugsContainer .body .body-content .body-contentBody table th,td {
+.adminProductsContainer .body .body-content .body-contentBody table th,td {
     border: 1px solid #228B22;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr th:first-of-type,
-.adminDrugsContainer .body .body-content .body-contentBody table tr th:first-of-type {
+.adminProductsContainer .body .body-content .body-contentBody table tr th:first-of-type {
     width: 15vw;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2),
-.adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2) {
+.adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2) {
     width: 30vw;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3),
-.adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3) {
+.adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3) {
     width: 10vw;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4),
-.adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4) {
+.adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4) {
     width: 10vw;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5),
-.adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5) {
+.adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5) {
     width: 15vw;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr td,
-.adminDrugsContainer .body .body-content .body-contentBody table tr td {
+.adminProductsContainer .body .body-content .body-contentBody table tr td {
     text-align: center;
     padding: 0.5vw;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr td img,
-.adminDrugsContainer .body .body-content .body-contentBody table tr td img {
+.adminProductsContainer .body .body-content .body-contentBody table tr td img {
     width: 12vw;
     height: 12vh;
     object-fit: cover;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr td button,
-.adminDrugsContainer .body .body-content .body-contentBody table tr td button {
+.adminProductsContainer .body .body-content .body-contentBody table tr td button {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 0.2vw;
     border: none;
     color: white;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr td button:first-of-type,
-.adminDrugsContainer .body .body-content .body-contentBody table tr td button:first-of-type {
+.adminProductsContainer .body .body-content .body-contentBody table tr td button:first-of-type{
     background-color: #228B22;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table tr td button:nth-of-type(2),
-.adminDrugsContainer .body .body-content .body-contentBody table tr td button:nth-of-type(2) {
+.adminProductsContainer .body .body-content .body-contentBody table tr td button:nth-of-type(2) {
     background-color: red;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail {
     width: 50vw;
     height: max-content;
     position: absolute;
@@ -416,34 +376,28 @@ body {
     display: none;
     text-align: start;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail #close,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail #close {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail #close {
     background-color: rgb(0, 0, 0, 85%);
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail p button,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail p button {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail p button {
     font-size: 1.5rem;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail div {
     display: flex;
     justify-content: center;
     padding-bottom: 2vh;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail div form {
     padding: 1vw;
     border-radius: 10px;
     background-color: rgb(255, 255, 255, 70%);
     box-shadow: 5px 5px 15px black;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form label,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form label {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail div form label {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form input,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form input {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail div form input {
     width: 30vw;
     height: 5vh;
     margin-left: 1vw;
@@ -453,8 +407,7 @@ body {
     box-shadow: 5px 5px 15px black;
     border: none;
 }
-.adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form .button button,
-.adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form .button button {
+.adminProductsContainer .body .body-content .body-contentBody table .productDetail div form .button button {
     background-color: #03C03C;
     color: white;
     padding: 0.5vw;
@@ -472,24 +425,21 @@ body {
     .signupContainer .top,
     .loginContainer .top,
     .adminContainer .top,
-    .adminFeedsContainer .top,
-    .adminDrugsContainer .top {
+    .adminProductsContainer .top {
         width: inherit;
         height: 10vh;
     }
     .signupContainer .top .left,
     .loginContainer .top .left,
     .adminContainer .top .left,
-    .adminFeedsContainer .top .left,
-    .adminDrugsContainer .top .left {
+    .adminProductsContainer .top .left {
         width: 30vw;
         height: inherit;
     }
     .signupContainer .top .left img,
     .loginContainer .top .left img,
     .adminContainer .top .left img,
-    .adminFeedsContainer .top .left img,
-    .adminDrugsContainer .top .left img {
+    .adminProductsContainer .top .left img {
         width: 30vw;
         height: 10vh;
         object-fit: cover;
@@ -497,8 +447,7 @@ body {
     .signupContainer .top .right-1,
     .loginContainer .top .right-1,
     .adminContainer .top .right-1,
-    .adminFeedsContainer .top .right-1,
-    .adminDrugsContainer .top .right-1 {
+    .adminProductsContainer .top .right-1 {
         width: 100vw;
         height: 30vh;
         display: flex;
@@ -511,8 +460,7 @@ body {
     .signupContainer .top .right-2,
     .loginContainer .top .right-2,
     .adminContainer .top .right-2,
-    .adminFeedsContainer .top .right-2,
-    .adminDrugsContainer .top .right-2 {
+    .adminProductsContainer .top .right-2 {
         display: block;
         display: flex;
         align-items: center;
@@ -520,8 +468,7 @@ body {
     .signupContainer .top .right-2 button,
     .loginContainer .top .right-2 button,
     .adminContainer .top .right-2 button, 
-    .adminFeedsContainer .top .right-2 button,
-    .adminDrugsContainer .top .right-2 button {
+    .adminProductsContainer .top .right-2 button {
         font-size: 2rem;
         border: none;
         background-color: white;
@@ -530,20 +477,17 @@ body {
     .signupContainer .top .right-2 button:nth-of-type(2),
     .loginContainer .top .right-2 button:nth-of-type(2),
     .adminContainer .top .right-2 button:nth-of-type(2),
-    .adminFeedsContainer .top .right-2 button:nth-of-type(2),
-    .adminDrugsContainer .top .right-2 button:nth-of-type(2) {
+    .adminProductsContainer .top .right-2 button:nth-of-type(2) {
         display: none;
     }
     .adminContainer .body,
-    .adminFeedsContainer .body,
-    .adminDrugsContainer .body {
+    .adminProductsContainer .body {
         height: 89vh;
     }
     .signupContainer .body .body-top,
     .loginContainer .body .body-top,
     .adminContainer .body .body-top,
-    .adminFeedsContainer .body .body-top,
-    .adminDrugsContainer .body .body-top {
+    .adminProductsContainer .body .body-top {
         width: 99vw;
         height: 50vh;
     }
@@ -588,14 +532,12 @@ body {
         left: 55vw;
     }
     .adminContainer .body .body-top div,
-    .adminFeedsContainer .body .body-top div,
-    .adminDrugsContainer .body .body-top div {
+    .adminProductsContainer .body .body-top div {
         width: 55vw;
         padding: 3px;
         text-align: center;
     }
-    .adminFeedsContainer .body .body-content .body-contentTop,
-    .adminDrugsContainer .body .body-content .body-contentTop {
+    .adminProductsContainer .body .body-content .body-contentTop {
         margin-top: 2vh;
         width: inherit;
         height: 7vh;
@@ -603,35 +545,30 @@ body {
         flex-direction: column;
         padding: 0 2vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentTop div,
-    .adminDrugsContainer .body .body-content .body-contentTop div {
+    .adminProductsContainer .body .body-content .body-contentTop div {
         display: flex;
         justify-content: space-between;
         width: 90vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentTop form input,
-    .adminDrugsContainer .body .body-content .body-contentTop form input {
+    .adminProductsContainer .body .body-content .body-contentTop form input {
         width: 70vw;
         height: 3vh;
         border: 1.5px solid #228B22;
         border-radius: 5px;
     }
-    .adminFeedsContainer .body .body-content .body-contentTop form button,
-    .adminDrugsContainer .body .body-content .body-contentTop form button {
+    .adminProductsContainer .body .body-content .body-contentTop form button {
         padding: 0.5vw;
         border: none;
         border-radius: 2px;
         background-color: #228B22;
         color: white;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody,
-    .adminDrugsContainer .body .body-content .body-contentBody {
+    .adminProductsContainer .body .body-content .body-contentBody {
         overflow-x: auto;
         white-space: nowrap;
         padding-bottom: 5vh;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table,
-    .adminDrugsContainer .body .body-content .body-contentBody table {
+    .adminProductsContainer .body .body-content .body-contentBody table {
         border-collapse: collapse;
         width: 200vw;
         border: 1px solid #228B22;
@@ -649,47 +586,38 @@ body {
         text-overflow: ellipsis;
         border: 1px solid #228B22;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table tr th:first-of-type,
-    .adminDrugsContainer .body .body-content .body-contentBody table tr th:first-of-type {
+    .adminProductsContainer .body .body-content .body-contentBody table tr th:first-of-type {
         width: 35vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2),
-    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2) {
+    .adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(2) {
         width: 75vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3),
-    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3) {
+    .adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(3) {
         width: 30vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4),
-    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4) {
+    .adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(4) {
         width: 30vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5),
-    .adminDrugsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5) {
+    .adminProductsContainer .body .body-content .body-contentBody table tr th:nth-of-type(5) {
         width: 30vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table tr td img,
-    .adminDrugsContainer .body .body-content .body-contentBody table tr td img {
+    .adminProductsContainer .body .body-content .body-contentBody table tr td img {
         width: 30vw;
         height: 15vh;
         object-fit: cover;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table .productDetail,
-    .adminDrugsContainer .body .body-content .body-contentBody table .productDetail {
+    .adminProductsContainer .body .body-content .body-contentBody table .productDetail {
         width: 90vw;
         height: max-content;
         position: absolute;
         top: 25vh;
         left: 4vw;
     }
-    .adminFeedsContainer .body .body-content .body-contentBody table .productDetail div form input,
-    .adminDrugsContainer .body .body-content .body-contentBody table .productDetail div form input {
+    .adminProductsContainer .body .body-content .body-contentBody table .productDetail div form input {
         width: 70vw;
         height: 4vh;
     }
-    .adminFeedsContainer .body .body-content .body-contentTop .addProduct,
-    .adminDrugsContainer .body .body-content .body-contentTop .addProduct {
+    .adminProductsContainer .body .body-content .body-contentTop .addProduct {
         width: 90vw;
         height: max-content;
         position: absolute;

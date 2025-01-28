@@ -4,7 +4,7 @@ const Product = require('../models/product');
 exports.getAdminMachineries = async(req, res) => {
     try {
         // Query the database to fetch product details
-        const Drugs = await Product.find({productCategory: 'Machineries'});
+        const Machineries = await Product.find({productCategory: 'Machineries'});
         res.render('adminMachineries', {title: 'Admin Machineries', Machineries});
     }catch(error){
         console.error('Error fetching items from the database', error);
