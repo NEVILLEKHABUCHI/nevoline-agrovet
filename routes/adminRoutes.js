@@ -8,6 +8,7 @@ const adminDashboardController = require('../controllers/adminDashboardControlle
 const adminFeedsController = require('../controllers/adminFeedsController');
 const adminDrugsController = require('../controllers/adminDrugsController');
 const adminMachineriesController = require('../controllers/adminMachineriesController');
+const adminSeedsController = require('../controllers/adminSeedsController');
 
 // adminDashboard routes
 router.get('/Dashboard', isAuthenticated, adminDashboardController.getAdminDashboard);
@@ -29,5 +30,11 @@ router.get('/Machineries', isAuthenticated, adminMachineriesController.getAdminM
 router.post('/addMachinery',isAuthenticated, upload.single('productImage'), adminMachineriesController.addMachinery);
 router.post('/machinery/:id/edit', isAuthenticated, upload.single('productImage'), adminMachineriesController.editMachinery);
 router.get('/machinery/:id/delete', isAuthenticated, upload.single('productImage'), adminMachineriesController.deleteMachinery);
+
+// adminFeeds routes
+router.get('/Seeds', isAuthenticated, adminSeedsController.getAdminSeeds);
+router.post('/addSeed', isAuthenticated, upload.single('productImage'), adminSeedsController.addSeed);
+router.post('/seed/:id/edit', isAuthenticated, upload.single('productImage'), adminSeedsController.editSeed);
+router.get('/seed/:id/delete', isAuthenticated, upload.single('productImage'), adminSeedsController.deleteSeed);
 
 module.exports = router;

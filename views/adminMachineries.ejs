@@ -70,7 +70,7 @@
                                 <div class="productDetail" id="detail-<%=Machinery._id %>">
                                     <p><button id="close"><i class="fa-solid fa-x"></i></button></p>
                                     <div>
-                                        <form action="" method="post" enctype="multipart/form-data">
+                                        <form action="/admin/machinery/<%= Machinery._id  %>/edit" method="post" enctype="multipart/form-data">
                                             <label for="image">MACHINERY IMAGE</label><br>
                                             <input type="file" id="image" name="productImage" value="<%= Machinery.productImage %>"><br>
         
@@ -90,7 +90,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <button onclick="">DELETE</button>
+                                <button onclick="confirmDeleteMachinery('<%= Machinery._id  %>')">DELETE</button>
                             </td>
                         </tr>
                
@@ -101,6 +101,6 @@
         </div>
     </div>
     <script src="/commonJavascript.js"></script>
-    <script src="/adminMachinery/adminMachineryJavascript.js"></script>
+    <script src="/adminMachineries/adminMachineriesJavaScript.js"></script>
 </body>
 </html>

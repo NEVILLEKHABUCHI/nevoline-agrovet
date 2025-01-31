@@ -1,19 +1,20 @@
 const Product = require('../models/product');
 
-// Render adminMachineries page and fetch products from mongoDB where productCategory = 'Machineries'
-exports.getAdminMachineries = async(req, res) => {
-    try {
+
+// Render adminSeeds page and fetch products from mongoDB where productCategory = 'Seeds'
+exports.getAdminSeeds = async(req, res) => {
+    try{
         // Query the database to fetch product details
-        const Machineries = await Product.find({productCategory: 'machineries'});
-        res.render('adminMachineries', {title: 'Admin Machineries', Machineries});
+        const Seeds = await Product.find({productCategory: 'Seeds'});
+        res.render('adminSeeds', {title: 'Admin Feeds', Seeds});
     }catch(error){
         console.error('Error fetching items from the database', error);
         req.flash('error', 'An error occurred while fetching items from the database');
     }
 }
 
-// Add a new machinery product
-exports.addMachinery = async(req, res) => {
+// Add a new seed product
+exports.addSeed = async(req, res) => {
     try {
         const {productName, productPrice, productQuantity, productCategory} = req.body;
         const productImage = req.file.buffer.toString('base64');
@@ -21,10 +22,9 @@ exports.addMachinery = async(req, res) => {
         // Validate form inputs
         if(!productImage || !productName || !productPrice || !productQuantity || !productCategory){
             // Send error message
-            req.flash('error', 'Kindly fill in all the fileds');
+            req.flash('error', 'Kindly fill in all the fields');
             return;
-        }
-        else {
+        } else {
             const newProduct = new Product({
                 productImage,
                 productName,
@@ -34,48 +34,50 @@ exports.addMachinery = async(req, res) => {
             });
             await newProduct.save();
             req.flash('success', 'Product added successfully');
-            res.redirect('/admin/Machineries');
+            res.redirect('/admin/Seeds');
         }
-    }catch(error){
+    } catch(error){
         console.error('Error while adding the product', error);
         req.flash('error', 'Error while adding the product');
-        res.redirect('/admin/Machineries');
+        res.redirect('/admin/Seeds');
     }
 }
 
-// Edit a machinery product
-exports.editMachinery = async(req, res) => {
+// Edit a seed product
+exports.editSeed = async(req, res) => {
 
     const {productName, productPrice, productQuantity, productCategory} = req.body;
     const updateData = {productName, productPrice, productQuantity, productCategory};
 
     if(req.file){
-         updateData = {productName, productPrice, productQuantity, productCategory};
+        updateData.productImage = req.file.buffer.toString('base64');
     }
+    
+
     try {
         await Product.findByIdAndUpdate(req.params.id, updateData);
 
         // Send success message
         req.flash('success', 'Product updated successfully');
-        res.redirect('/admin/Machineries');
+        res.redirect('/admin/Seeds');
     }catch(error){
         // Send error message
         req.flash('error', 'Failed to update the product');
-        res.redirect('/admin/Machineries');
+        res.redirect('/admin/Seeds');
     }
 }
 
-// Delete machinery product
-exports.deleteMachinery = async(req, res) => {
+// Delete seed product
+exports.deleteSeed = async(req, res) => {
     try {
         await Product.findByIdAndDelete(req.params.id);
 
         // Send success message
-        req.flash('success', 'Product deleted successfully');
-        res.redirect('/admin/Machineries');
-    }catch(error) {
+        req.flash('success', 'Product deleted Successfully');
+        res.redirect('/admin/Seeds');
+    }catch(error){
         // Send error message
-        req.flash('error', 'Failed to delete the product ');
-        res.redirect('/admin/Machineries');
+        req.flash('error', 'Failed to delete the product');
+        res.redirect('/admin/Seeds');
     }
 }
