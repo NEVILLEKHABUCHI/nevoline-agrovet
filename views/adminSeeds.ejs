@@ -81,7 +81,7 @@
                                             <input type="text" id="price" name="productPrice" value="<%= Seed.productPrice %>"><br>
         
                                             <label for="quantity">FEED QUANTITY</label><br>
-                                            <input type="text" id="quantity" name="productQuantity" value="<%= Feed.productQuantity %>"><br>
+                                            <input type="text" id="quantity" name="productQuantity" value="<%= Seed.productQuantity %>"><br>
 
 
                                             <div class="button">
@@ -90,7 +90,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <button onclick="confirmDeleteFeed('<%= Seed._id %>')">DELETE</button>
+                                <button onclick="confirmDeleteSeed('<%= Seed._id %>')">DELETE</button>
                             </td>
                         </tr>
                
@@ -101,6 +101,6 @@
         </div>
     </div>
     <script src="/commonJavascript.js"></script>
-    <script src="/adminFeeds/adminFeedsJavascript.js"></script>
+    <script src="/adminSeeds/adminSeedsJavaScript.js"></script>
 </body>
 </html>
