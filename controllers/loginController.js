@@ -32,7 +32,7 @@ exports.getLogin=(req,res) => {
                 if(user.USERNAME === ADMIN_USERNAME){
                     return res.status(200).redirect('/admin/Dashboard');
                 }else {
-                    return res.status(200).send('You have successfully logged in as a common user');
+                    return res.status(200).redirect('/client/Shop');
                 }
             }else{
                 req.flash('error', 'Invalid username or password');

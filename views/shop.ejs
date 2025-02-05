@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('./partials/header.ejs')%>
+        <link rel="stylesheet" href="/shop/shop.css"
+    </head>
+<body>
+    <div class="shopContainer">
+        <div class="top">
+            <%-include('./partials/clientTabs.ejs')  %>
+        </div>
+        <div class="top1">
+            <div class="content">
+                <div class="content_1">
+                    <div class="search">
+                        <input type="text" name="query" placeholder="Search for products">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="cart">
+                       <a href="">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p id="cart-count"></p>
+                       </a>
+                    </div>
+                </div>
+                <div class="content_2">
+                    <button>FEEDS</button>
+                    <button>DRUGS</button>
+                    <button>SEEDS</button>
+                    <button>MACHINERY</button>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+               
+        </div>
+    </div>
+    <script src="commonJavascript.js"></script>
+</body>
+</html>

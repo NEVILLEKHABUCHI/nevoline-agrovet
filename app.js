@@ -17,6 +17,7 @@ const servicesRoutes = require('./routes/servicesRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const authenticationRoutes = require('./routes/authenticationRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const clientRoutes = require('./routes/clientRoutes');
 
 const connectDB = require('./models/mongoDB');
 
@@ -84,6 +85,7 @@ app.use(servicesRoutes);
 app.use(productsRoutes);
 app.use('/auth', authenticationRoutes);
 app.use('/admin', adminRoutes);
+app.use('/client', clientRoutes);
 
 
 // Start the server
