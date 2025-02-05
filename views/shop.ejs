@@ -24,17 +24,60 @@
                     </div>
                 </div>
                 <div class="content_2">
-                    <button>FEEDS</button>
-                    <button>DRUGS</button>
-                    <button>SEEDS</button>
-                    <button>MACHINERY</button>
+                    <button onclick="showCategory('feedsDiv')">FEEDS</button>
+                    <button onclick="showCategory('drugsDiv')">DRUGS</button>
+                    <button onclick="showCategory('seedsDiv')">SEEDS</button>
+                    <button onclick="showCategory('machineriesDiv')">MACHINERY</button>
                 </div>
             </div>
         </div>
         <div class="body">
-               
+               <div class="feedsDiv">
+                <% Feeds.forEach((Feed) => {%>
+                    <div class="Feed">
+                        <img src="data:image/png;base64,<%=Feed.productImage%>" alt="No image">
+                        <p><%=Feed.productName %></p>
+                        <p>Kshs. <%=Feed.productPrice %></p>
+                        <p><button class="add-to-cart" data-product-id="<%=Feed._id %>" onclick="addToCart('<%=Feed._id %>')">ADD TO CART</button></p>
+                    </div>
+                    <% }) %>
+               </div>
+
+               <div class="drugsDiv" style="display: none;">
+                <% Drugs.forEach((Drug) => {%>
+                    <div class="Drug">
+                        <img src="data:image/png;base64,<%=Drug.productImage%>" alt="No image">
+                        <p><%=Drug.productName %></p>
+                        <p>Kshs. <%=Drug.productPrice %></p>
+                        <p><button class="add-to-cart" data-product-id="<%=Drug._id %>" onclick="addToCart('<%=Drug._id %>')">ADD TO CART</button></p>
+                    </div>
+                    <% }) %>
+               </div>
+
+               <div class="seedsDiv" style="display: none;">
+                <% Seeds.forEach((Seed) => {%>
+                    <div class="Seed">
+                        <img src="data:image/png;base64,<%=Seed.productImage%>" alt="No image">
+                        <p><%=Seed.productName %></p>
+                        <p>Kshs. <%=Seed.productPrice %></p>
+                        <p><button class="add-to-cart" data-product-id="<%=Seed._id %>" onclick="addToCart('<%=Seed._id %>')">ADD TO CART</button></p>
+                    </div>
+                    <% }) %>
+               </div>
+
+               <div class="machineriesDiv" style="display: none;">
+                <% Machineries.forEach((Machinery) => {%>
+                    <div class="Machinery">
+                        <img src="data:image/png;base64,<%=Machinery.productImage%>" alt="No image">
+                        <p><%=Machinery.productName %></p>
+                        <p>Kshs. <%=Machinery.productPrice %></p>
+                        <p><button class="add-to-cart" data-product-id="<%=Machinery._id %>" onclick="addToCart('<%=Seed._id %>')">ADD TO CART</button></p>
+                    </div>
+                    <% }) %>
+               </div>
         </div>
     </div>
     <script src="commonJavascript.js"></script>
+    <script src="/shop/shopJavascript.js"></script>
 </body>
 </html>
