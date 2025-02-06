@@ -6,5 +6,5 @@ function showCategory(category) {
     });
 
     // Show the selected category
-    document.querySelector('.' + category).style.display = 'block';
+    document.querySelector('.' + category).style.display = 'flex';
 }

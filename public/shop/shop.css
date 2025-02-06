@@ -199,12 +199,12 @@
     .shopContainer .top .right-1{
         width: 99vw;
         height: 30vh;
-        display: flex;
+        display: none;
         flex-direction: column;
         /* justify-content: space-between;s */
         position: absolute;
-        top: 10.5vh;
-        background-color: rgb(255, 255, 255,70%);
+        top: 10vh;
+        background-color: rgb(255, 255, 255,90%);
         display: none;
     }
     .shopContainer .top .right-2{
@@ -253,19 +253,30 @@
         padding-top: 2vh;
         padding-bottom: 10vh;
     }
-    .shopContainer .body .content {
-        width: 90vw;
-        height: max-content;
-        display: grid;
-        grid-template-columns: repeat(2,45vw);
-        gap: 3.7vw;
+    .shopContainer .body .feedsDiv,
+    .shopContainer .body .drugsDiv,
+    .shopContainer .body .seedsDiv,
+    .shopContainer .body .machineriesDiv {
+        display: flex;
+        justify-content: center;
     }
-    .shopContainer .body .content .Feed{
+    .shopContainer .body .feedsDiv .Feed,
+    .shopContainer .body .drugsDiv .Drug,
+    .shopContainer .body .seedsDiv .Seed,
+    .shopContainer .body .machineriesDiv .Machinery {
         width: 40vw;
-        height: max-content;
     }
-    .shopContainer .body .content .Feed img{
+    .shopContainer .body .feedsDiv .Feed img,
+    .shopContainer .body .drugsDiv .Drug img,
+    .shopContainer .body .seedsDiv .Seed img,
+    .shopContainer .body .machineriesDiv .Machinery img {
         width: 38vw;
         height: 20vh;
+    }
+    .shopContainer .body .feedsDiv .Feed p:last-of-type button,
+    .shopContainer .body .drugsDiv .Drug p:last-of-type button,
+    .shopContainer .body .seedsDiv .Seed p:last-of-type button,
+    .shopContainer .body .machineriesDiv .Machinery p:last-of-type button {
+        border-radius: 5px;
     }
 }
