@@ -8,5 +8,6 @@ const shopController = require('../controllers/shopController');
 
 // shop routes
 router.get('/Shop', isAuthenticated, shopController.getShop);
+router.post('/addToCart', isAuthenticated, shopController.addToCart);
 
 module.exports = router;

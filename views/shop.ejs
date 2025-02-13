@@ -38,7 +38,7 @@
                         <img src="data:image/png;base64,<%=Feed.productImage%>" alt="No image">
                         <p><%=Feed.productName %></p>
                         <p>Kshs. <%=Feed.productPrice %></p>
-                        <p><button>ADD TO CART</button></p>
+                        <p><button onclick="addToCart('<%= user %>', '<%= Feed.productImage %>', '<%= Feed.productName %>', '<%= Feed.productPrice %>')">ADD TO CART</button></p>
                     </div>
                     <% }) %>
                </div>

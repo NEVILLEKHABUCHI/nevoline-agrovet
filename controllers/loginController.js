@@ -27,13 +27,13 @@ exports.getLogin=(req,res) => {
             const match = await bcrypt.compare(password, user.PASSWORD);
             if(match){
                 // Adding sessions
-                req.session.user = {username: user.USERNAME};
+                req.session.user = {user_id: user.USER_ID, username: user.USERNAME};
                 // Check if the user is an admin
                 if(user.USERNAME === ADMIN_USERNAME){
                     // return res.status(200).redirect('/admin/Dashboard');
                     return res.render('loading', {redirectUrl: '/admin/Dashboard'});
                 }else {
-                    // return res.status(200).redirect('/client/Shop');
+                    // console.log(req.session.user.user_id)
                     return res.render('loading', {redirectUrl: '/client/shop'})
                 }
             }else{
