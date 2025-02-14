@@ -9,5 +9,6 @@ const shopController = require('../controllers/shopController');
 // shop routes
 router.get('/Shop', isAuthenticated, shopController.getShop);
 router.post('/addToCart', isAuthenticated, shopController.addToCart);
+router.get('/cart/count', isAuthenticated, shopController.getCartCount);
 
 module.exports = router;
